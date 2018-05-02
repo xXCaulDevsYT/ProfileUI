@@ -86,48 +86,48 @@ class ProfileWindow extends Window {
 		$name2 = ucfirst($name);
 		$this->data = [
 			"type" => "custom_form",
-			"title" => TextFormat::AQUA.TextFormat::BOLD."$name2"."'s Profile",
+			"title" => TextFormat::AQUA.TextFormat::DARK_AQUA."$name2"."'s §bProfile",
 			"content" => []
 		];
 
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Name: ".TextFormat::WHITE."$name2"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dName: ".TextFormat::DARK_PURPLE."$name2"];
 
 		if($this->pl->config->get("rank") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Rank: ".TextFormat::WHITE."$rank"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dRank: ".TextFormat::DARK_PURPLE."$rank"];
 		}
 
 		if($this->pl->config->get("money") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Money: ".TextFormat::WHITE."$money"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dMoney: ".TextFormat::DARK_PURPLE."$money"];
 		}
 
 		if($this->pl->config->get("faction") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Faction: ".TextFormat::WHITE."$fac"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dFaction: ".TextFormat::DARK_PURPLE."$fac"];
 		}
 		
 		if($this->pl->config->get("mining-record") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Blocks broken: ".TextFormat::WHITE."$mined"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dBlocks broken: ".TextFormat::DARK_PURPLE."$mined"];
 		}
 		
 		if($this->pl->config->get("pvp-record") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Kills: ".TextFormat::WHITE."$kills"];
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Deaths: ".TextFormat::WHITE."$deaths"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dKills: ".TextFormat::DARK_PURPLE."$kills"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dDeaths: ".TextFormat::WHITE."$deaths"];
 		}
 		
 		if($this->pl->config->get("kdr") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Kills/Deaths: ".TextFormat::WHITE."$kdr"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dKills/Deaths: ".TextFormat::DARK_PURPLE."$kdr"];
 		}
 
 		if($this->pl->config->get("first-played") == 1){
-		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."First Played: ".TextFormat::WHITE."$date2 at $time2"];
+		$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dFirst Played: ".TextFormat::DARK_PURPLE."$date2 at $time2"];
 		}
 
 		if($this->pl->config->get("last-seen") == 1){
 			if($flag == true){
-			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Status: ".TextFormat::WHITE."$status"];
+			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dStatus: ".TextFormat::DARK_PURPLE."$status"];
 			}
 			if($flag == false){
-			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Status: ".TextFormat::WHITE."$status"];
-			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."Last seen: ".TextFormat::WHITE."$date at $time"];	
+			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dStatus: ".TextFormat::DARK_PURPLE."$status"];
+			$this->data["content"][] = ["type" => "label", "text" => TextFormat::GOLD."§dLast seen: ".TextFormat::DARK_PURPLE."$date at $time"];	
 			}
 		}
 
