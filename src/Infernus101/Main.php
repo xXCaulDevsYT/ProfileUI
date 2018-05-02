@@ -77,12 +77,12 @@ class Main extends PluginBase implements Listener {
 	  }
 	  if(strtolower($cmd->getName()) == 'profile'){
 				if(!isset($args[0])){
-				  $sender->sendMessage(TextFormat::RED."Usage: /profile <player>\n".TextFormat::GREEN."Profile UI by Infernus101! github.com/Infernus101/ProfileUI\n".TextFormat::AQUA."Server - FallenTech.tk 19132");
+				  $sender->sendMessage(TextFormat::RED."§7Please use: §2/profile <player>\n");
 				  return false;
 				}
 				$noob = $this->getServer()->getOfflinePlayer($args[0]);
 				if(!is_numeric($noob->getFirstPlayed())){
-					$sender->sendMessage(TextFormat::RED."Error > Player not found");
+					$sender->sendMessage(TextFormat::RED."Error > §2Player cannot be found");
 					return false;
 				}
 				$handler = new Handler();
