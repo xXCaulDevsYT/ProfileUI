@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener {
 	public $flag = false;
 	
 	public function onEnable(){
-		$this->getServer()->getLogger()->notice("[ProfielUI] Enabled! - By Infernus101");
+		$this->getServer()->getLogger()->notice("[WardenStats] Enabled! - By EmeraldMC");
 		$file = "config.yml";
 		if(!file_exists($this->getDataFolder() . $file)){
 		@mkdir($this->getDataFolder());
@@ -45,7 +45,7 @@ class Main extends PluginBase implements Listener {
 	
 	public function onDisable(){
 		$this->saveStat();
-		$this->getServer()->getLogger()->notice("[ProfielUI] Disabled! - By Infernus101");
+		$this->getServer()->getLogger()->notice("[WardenStats] Disabled! - By EmeraldMC");
 	}
 	
 	public function saveStat(){
@@ -75,14 +75,14 @@ class Main extends PluginBase implements Listener {
 		  $sender->sendMessage(TextFormat::RED."> Command must be run ingame!");
 		  return true;
 	  }
-	  if(strtolower($cmd->getName()) == 'profile'){
+	  if(strtolower($cmd->getName()) == 'elixirstats'){
 				if(!isset($args[0])){
-				  $sender->sendMessage(TextFormat::RED."§7Please use: §2/profile <player>\n");
+				  $sender->sendMessage(TextFormat::RED."§l§cERROR§r§6 Usage: /elixirstats <player>§r\n");
 				  return false;
 				}
 				$noob = $this->getServer()->getOfflinePlayer($args[0]);
 				if(!is_numeric($noob->getFirstPlayed())){
-					$sender->sendMessage(TextFormat::RED."Error > §2Player cannot be found");
+					$sender->sendMessage(TextFormat::RED."§l§cERROR§r§6 Couldnt find that player!§r\n");
 					return false;
 				}
 				$handler = new Handler();
