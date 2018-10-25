@@ -1,8 +1,8 @@
-name: ProfileUI
-author: Infernus101
+name: ElixirStats
+author: EmeraldMC
 api: [3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13]
-main: Infernus101\Main
-version: 4.1.1
+main: ElixirStats\Main
+version: 1.0
 commands:
-  profile:
-    description: Player profile UI!
+  elixirstats:
+    description: §7Check yours or others §dElixir§bHCF§r§7 stats
